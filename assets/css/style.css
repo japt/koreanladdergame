@@ -1,0 +1,15 @@
+body{margin: 0px;font-family: arial;background:url(../images/bg-body.gif)}
+h2{margin:0px;padding:0px;}
+.wrapper{display:block;}
+.container{width:570px;margin-top:13px;}
+.header{background:#2F96B4;;display:block;position:relative;height:50px;padding:10px;margin:0px;}
+.header h2{color:white;padding:0px;margin:0;display:inline-block;position:relative;left:13px;top:5px;}
+.main{
+   padding:5px 20px 5px 20px;
+   margin-top:5px;
+}
+
+.user-input-container{text-align:center !important;}
+.user-input-textbox{margin-bottom:10px;}
+.align-center{text-align:center;}
+.border-error{border:solid 1px #B94A48 !important;}

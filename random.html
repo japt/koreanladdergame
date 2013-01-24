@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+table{border-collapse:collapse;width:100%;border-bottom:none;}
+tr td{padding:10px;border-top:none;border-left:solid 2px black;}
+.td-last{border-right:solid 2px black;}
+</style>
+<script  type="text/javascript" src="http://phman.dev.com/core/request/assets/core/plugins/jquery/js/jquery-1.7.1.min.js?cac=true"></script>
+</head>
+<body>
+
+<table id="ladder-container">
+</table>
+<script type="text/javascript">
+var container = $("#ladder-container");
+var totalUser = 3;
+var totalRows = 10;
+var randomRange = totalUser - 1;
+var shtml = '';
+
+
+// for(var l = 1 ; l <=totalRows ; l++){
+   // var rand = Math.round( ( ( Math.random()) * randomRange ));
+   // rand = ( rand === 0 || randomRange === 1 ) ? 1 : rand;
+
+   // console.log(rand);
+// }
+var tdLast;
+var rand;
+for( var i = 1 ; i < totalRows ; i++ ) {
+var numContent = "";
+   
+   shtml += "<tr>";
+      for ( var j = 1 ; j < totalUser ; j++ ) {
+         tdLast = '';
+         borderCss = '';
+         
+         if ( i >= 1 && i < totalRows ) {
+            
+            // borderCss = 'style="border-bottom:solid 2px black;"';
+            for(l = 1; l <10 ;l++){
+            
+               rand = Math.round( ( ( Math.random()) * randomRange ));
+               rand = ( rand === 0 || randomRange === 1 ) ? 1 : rand;
+               console.log(i+ ":" + rand + '===' +j)
+            }
+            if(j===rand){
+               // console.log(rand);
+               borderCss = 'style="border-bottom:solid 2px black;"';
+               
+            }
+         }
+         
+         if ( i == totalRows - 1 ) {
+            borderCss = 'style="border-bottom:none;"';         
+         }
+         if ( j == totalUser - 1 ) {
+            tdLast = 'td-last';
+         }
+         shtml += '<td ' + borderCss + ' class=' + tdLast + '>1</td>';
+      }
+   shtml += "</tr>";   
+}
+
+container.html(shtml);
+
+
+</script>
+</body>
+</html>
